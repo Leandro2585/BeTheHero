@@ -47,8 +47,8 @@ export default function Register(){
                     <p>Faça seu cadastro, entre na plataforma e ajude pessoas a encontrarem os casos da sua ONG.</p>
 
                     <Link className="back-link" to="/">
-                        <FiArrowLeft size={16} color="E02041"/>
-                        Não tenho cadastro
+                        <FiArrowLeft size={16} color="#E02041"/>
+                        Voltar para Home
                     </Link>
                 </section>
                 <form onSubmit={handleRegister}>
@@ -58,11 +58,11 @@ export default function Register(){
                         onChange={e => setName(e.target.value)}/>
                     <input
                         type="email" 
-                        placeholder="email"
+                        placeholder="E-mail"
                         value={email}
                         onChange={e => setEmail(e.target.value)}/>
                     <input 
-                        plcaholder="whatsApp"
+                        placeholder="whatsApp"
                         value={whatsapp}
                         onChange={e => setWhatsapp(e.target.value)}/>
 

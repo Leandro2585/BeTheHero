@@ -1,6 +1,6 @@
 .profile-container{
     width:100%;
-    max-width: 1180px;
+    max-width: 900px;
     padding: 0 30px;
     margin: 32px auto;
 }
@@ -43,16 +43,19 @@
     list-style: none;
 }
 .profile-container ul li{
-    background-color: #fff;
+    background-color: #FFF;
     padding: 24px;
     border-radius: 8px;
     position: relative;
+    box-shadow: 0px 0px 100px rgba(0,0,0,0.1);
+    border:1px solid rgba(38,77,30,0.2);
 }
 .profile-container ul li button{
     position: absolute;
     right: 24px;
     top: 24px;
     border: 0;
+    background: #fff;
 }
 .profile-container ul li button:hover{
     opacity: 0.8;
