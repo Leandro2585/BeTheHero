@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import './style.css';
-import logoImg from '../../assets/logo.svg';
+import RegisterStyle from './style';
+import LogoImg from '../Logo/logo';
 import { Link, useHistory } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
 
@@ -38,16 +38,17 @@ export default function Register(){
     }
 
     return (
-        <div className="register-container">
+        <RegisterStyle>
             <div className="content">
                 <section>
-                    <img src={logoImg}/>
+                    {/* <img src={logoImg}/> */}
+                    <LogoImg/>
 
                     <h1>Cadastro</h1>
                     <p>Faça seu cadastro, entre na plataforma e ajude pessoas a encontrarem os casos da sua ONG.</p>
 
                     <Link className="back-link" to="/">
-                        <FiArrowLeft size={16} color="#E02041"/>
+                        <FiArrowLeft size={16}/>
                         Voltar para Home
                     </Link>
                 </section>
@@ -81,6 +82,6 @@ export default function Register(){
                     <button className="button" type="submit">Cadastrar</button>
                 </form>
             </div>
-        </div>
+        </RegisterStyle>
     );
 }

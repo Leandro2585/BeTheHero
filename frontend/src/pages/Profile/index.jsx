@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './style.css';
-import logoImg from '../../assets/logo.svg';
+import ProfileStyle from './style';
+import LogoImg from '../Logo/logo';
 import { FiPower, FiTrash2 } from 'react-icons/fi'
 import { Link, useHistory } from 'react-router-dom'
 
@@ -46,9 +46,10 @@ export default function Profile(){
     }
 
     return (
-        <div className="profile-container">
+        <ProfileStyle>
             <header>
-                <img src={logoImg} alt="Be The Hero"/>
+                {/* <img src={logoImg} alt="Be The Hero"/> */}
+                <LogoImg/>
                 <span>Bem vinda, {ongName}</span>
 
                 <Link className="button" to="/incidents/new">Cadastrar novo caso</Link>
@@ -70,11 +71,11 @@ export default function Profile(){
                     <p>{Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL'}).format(incident.value)}</p>
 
                     <button onClick={() => handleDeleteIncident(incident.id)} type="button">
-                        <FiTrash2 size={20} color="#A8A8B3"/>
+                        <FiTrash2 size={20} color={props => props.theme.colors.background}/>
                     </button>
                 </li>
                 ))}
             </ul>
-        </div>
+        </ProfileStyle>
     );
 }

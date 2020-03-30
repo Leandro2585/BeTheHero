@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { Link , useHistory} from 'react-router-dom';
 
-import './style.css';
+import LoginStyle from './style';
 import { FiLogIn } from 'react-icons/fi';
-import logoImg from '../../assets/logo.svg';
+import LogoImg from '../Logo/logo';
 import heroesImg from '../../assets/heroes.png';
 
 import api from '../../services/api';
+
 
 export default function Logon(){
 
@@ -26,10 +27,12 @@ export default function Logon(){
     }
 
     return(
-        <div className="logon-container">
+        <LoginStyle>
+            
             <section className="form">
-                <img src={logoImg} alt="Be The Hero"/>
-
+                
+                {/* <img src={logoImg} alt="Be The Hero"/> */}
+                <LogoImg/>
                 <form onSubmit={handleLogin}>
                     <h1>Faça seu logon</h1>
                     <input 
@@ -40,12 +43,13 @@ export default function Logon(){
 
                     
                     <Link className="back-link" to="/register">
-                        <FiLogIn size={16} color="#E02041"/>
+                        <FiLogIn size={16}/>
                         Não tenho cadastro
                     </Link>
                 </form>
             </section>
             <img src={heroesImg} alt="Heroes"/>
-        </div>
+        </LoginStyle>
+    
     );
 }
